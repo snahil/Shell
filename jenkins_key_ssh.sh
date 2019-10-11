@@ -10,9 +10,9 @@ PASSWORD=admin123
 JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpsPort=$HTTPS_PORT --httpsKeyStore=$KEYSTORE --httpsKeyStorePassword=$PASSWORD --httpPort=-1"
 
 
-#Server	smtp.sendgrid.net
+#Server	<smtp_server>
 #Ports	
 #25, 587	(for unencrypted/TLS connections)
 #465	(for SSL connections)
-#Username	apikey
-#Password   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
+#Username	<username>
+#Password <password>
