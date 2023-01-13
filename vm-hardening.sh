@@ -48,7 +48,10 @@ set_sysctl_conf() {
     echo "vm.overcommit_memory = 1" >> /etc/sysctl.conf && echo "sysctl overcommit_memory set" || { echo "sysctl overcommit_memory set failed"; exit 1; }   
     echo "net.ipv4.tcp_max_syn_backlog = 4096" >> /etc/sysctl.conf && echo "sysctl tcp_max_syn_backlog set" || { echo "sysctl tcp_max_syn_backlog set failed"; exit 1; }   
     echo "net.ipv4.tcp_fin_timeout = 30" >> /etc/sysctl.conf && echo "sysctl tcp_fin_timeout set" || { echo "sysctl tcp_fin_timeout set failed"; exit 1; }   
-    echo "net.ipv4.tcp_tw_recycle = 1" >> /etc/sysctl.conf && echo "sysctl tcp_tw_recycle set" || { echo "sysctl tcp_tw_recycle set failed"; exit 1; }   
+    echo "net.ipv4.tcp_tw_recycle = 1" >> /etc/sysctl.conf && echo "sysctl tcp_tw_recycle set" || { echo "sysctl tcp_tw_recycle set failed"; exit 1; }
+    echo "net.ipv6.conf.all.disable_ipv6=1" >> /etc/sysctl.conf && echo "sysctl all disable_ipv6 set" || { echo "sysctl all disable_ipv6 set failed"; exit 1; }
+    echo "net.ipv6.conf.default.disable_ipv6=1" >> /etc/sysctl.conf && echo "sysctl default disable_ipv6 set" || { echo "sysctl default disable_ipv6 set failed"; exit 1; }
+    echo "net.ipv6.conf.lo.disable_ipv6=1" >> /etc/sysctl.conf && echo "sysctl lo disable_ipv6 set" || { echo "sysctl lo disable_ipv6 set failed"; exit 1; }
     echo "vm.swappiness = 10" >> /etc/sysctl.conf && echo "sysctl swappiness set" || { echo "sysctl swappiness set failed"; exit 1; }   
 }
 
